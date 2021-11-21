@@ -12,13 +12,15 @@ public class VeterinarianReception {
     private final Owner owner;
     private final Veterinarian veterinarian;
     private Date date;
+    private boolean isUrgent;
 
-    public VeterinarianReception(int id, Pet pet, Owner owner, Veterinarian veterinarian, Date date) {
+    public VeterinarianReception(int id, Pet pet, Owner owner, Veterinarian veterinarian, Date date, boolean isUrgent) {
         this.id = id;
         this.pet = pet;
         this.owner = owner;
         this.veterinarian = veterinarian;
         this.date = date;
+        this.isUrgent = isUrgent;
     }
 
     public int getId() {
@@ -43,5 +45,13 @@ public class VeterinarianReception {
 
     public void setDate(Date date) {
         this.date = date;
+    }
+
+    public boolean isUrgent() {
+        return isUrgent;
+    }
+
+    public void setUrgent(boolean urgent) {
+        isUrgent = urgent;
     }
 }
